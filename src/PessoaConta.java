@@ -14,6 +14,9 @@ public class PessoaConta implements InterfaceBanco{
         return "Ola "+this.Nome+", obrigado por criar uma conta em nosso banco, sua agencia "+this.Agencia+", conta "+this.Numero+" e seu saldo R$"+this.Saldo+" já disponivel para saque.";
     }
     public String retirar_Saldo(Double SaldoRetirar){
-        return "Saldo: "+(this.Saldo - SaldoRetirar);
+        if(this.Saldo >= SaldoRetirar){
+            return "Saldo: "+(this.Saldo - SaldoRetirar);
+        }
+        return "Não há saldo suficiente";
     }
 }
