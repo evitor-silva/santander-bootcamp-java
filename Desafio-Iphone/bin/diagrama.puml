@@ -1,0 +1,24 @@
+@startuml
+class Telefone extends Musica{
+    + musica(str: String): String
+    + telefonia(str: String): String
+    + navegador(str: String): String
+}
+
+class Musica extends Telefonia{
+    # tocar(): String
+    # pausar(): String
+    # selecionar(): String
+}
+
+class Telefonia extends Navegador{
+    # ligar(): String
+    # atender(): String
+    # iniciarChamada(): String
+}
+class Navegador{
+    # exibirPagina(): String
+    # adicionarNovaAba(): String
+    # atualizarPagina(): String
+}
+@enduml
